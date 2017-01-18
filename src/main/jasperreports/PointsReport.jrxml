@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-01-18T14:23:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="text_output" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9a0b1db2-1ed0-44e1-960b-4626cea0097d">
+	<property name="net.sf.jasperreports.export.text.page.width" value="80"/>
+	<property name="net.sf.jasperreports.export.text.page.height" value="40"/>
+	<field name="userName" class="java.lang.String"/>
+	<field name="lastAccessed" class="java.lang.String"/>
+	<field name="isActive" class="java.lang.String"/>
+	<field name="points" class="java.lang.String"/>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="152" height="20" uuid="d065f8ed-0c05-47d0-a679-a392c9cfabe5"/>
+				<text><![CDATA[userName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="0" width="143" height="20" uuid="573550a9-5fc9-41ee-ae4f-7b550868c75d"/>
+				<text><![CDATA[lastAccessed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="0" width="138" height="20" uuid="4b1f5b5c-4c61-4159-9357-041fd8e3e775"/>
+				<text><![CDATA[isActive]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="0" width="103" height="20" uuid="1c851f50-9ace-4e30-be1e-7d5454127db8"/>
+				<text><![CDATA[points]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="23" uuid="7e358a83-b348-40ca-b6f4-009d6bed4b24"/>
+				<text><![CDATA[----------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="20" width="100" height="23" uuid="523a7abd-0fbd-4b63-b8d5-2ed78ee795cc"/>
+				<text><![CDATA[---------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="20" width="100" height="23" uuid="7ebe2ec7-9450-4fdf-b99a-48af5fe3ce49"/>
+				<text><![CDATA[-------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="20" width="100" height="23" uuid="155d3972-9d99-4d3b-bb41-05f08dcdd5fa"/>
+				<text><![CDATA[--------]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="152" height="20" uuid="652256e2-0f1e-4848-b1d0-d064caaa5020"/>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="0" width="143" height="20" uuid="380af714-4dbd-4e0f-ae23-bfada0449a2f"/>
+				<textFieldExpression><![CDATA[$F{lastAccessed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="63" height="20" uuid="752c0f18-2dea-4209-bd0d-d787d8c462a8"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{isActive}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="54" height="20" uuid="40807ad0-58a4-42b7-9636-04f01c0c3bf5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{points}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
