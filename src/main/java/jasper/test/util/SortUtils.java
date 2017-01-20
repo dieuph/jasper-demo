@@ -1,5 +1,5 @@
 /**=================================================================================================
- * System name : RENTAL REPORT SYSTEM
+ * System name : JFE Project
  * Version     : 1.0.0
  * Create date : 2016-06-14
  * Update date : 2016-06-14
@@ -9,6 +9,7 @@ package jasper.test.util;
 
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * <b>SortUtils</b>.<br>
@@ -47,6 +48,11 @@ public class SortUtils {
 	
 	/** The Constant DATATYPE_DOUBLE. */
 	public static final String DATATYPE_DOUBLE = "java.lang.Double";
+	
+	/** The Constant DATATYPE_DATE. */
+	public static final String DATATYPE_DATE = "java.util.Date";
+	
+	public static final String DATATYPE_CHAR = "java.lang.Character";
 	/**
 	 * Compare.<br>
 	 * ------------------------<br>
@@ -88,6 +94,17 @@ public class SortUtils {
 			case DATATYPE_BIGDECIMAL:
 				result = ((BigDecimal) valueA).compareTo((BigDecimal) valueB);
 				break;
+			case DATATYPE_DATE:
+				result = ((Date) valueA).compareTo((Date) valueB);
+				break;
+			case DATATYPE_CHAR:
+				result = ((Character) valueA).compareTo((Character) valueB);
+				break;
+			default:
+				if (valueA instanceof byte[]) {
+					result = valueA.toString().compareTo(valueB.toString());
+					break;
+				}
 		}
 		if (!isAsc) result *= NEGATIVE_UNIT;
 		return result;
